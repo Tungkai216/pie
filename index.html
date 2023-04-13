@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="img/apple-tart.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where is the pie?</title>
+</head>
+<style>
+    body{
+        position: fixed;
+        background-image: url(img/dapur.png);
+        background-size: cover;
+        user-select: none;
+        
+    }
+    h1, h2{
+        font-family: sans-serif;
+        margin-top: 50px;
+        text-align: center;
+        margin-left: 450px;
+    }
+    h1{
+        font-size: 50px;
+        color: white;
+        transition: 1s;
+        animation: waviy 3s infinite reverse;
+       
+        
+    }
+    h2{
+        opacity: 0.1;
+        color:brown;
+        margin-top: 525px;
+        margin-left: 620px;
+    }
+    @keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(20px);
+
+    
+  }
+  20% {
+    transform: translateY(-20px);
+    color: brown;
+  }
+}
+.img-1{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom:55px;
+    left:510px;
+    
+}
+.img-2{
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+
+.gallery li{
+    opacity:0.1;
+    transition: 0.3s;
+}
+.gallery li:hover{
+    opacity:1;
+}
+div.title{
+    font-family: sans-serif;
+    font-size: 12px;
+    display: none;
+    position: fixed;
+    bottom:100px;
+    left:510px;
+    color: white;
+   
+    
+}
+div.title:hover, a.wrap:hover + div{
+    display: block;
+}
+.center{
+   position: fixed;
+   text-align: center;
+}
+/* overlay */
+.overlay{
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0);
+    transition: .3s;
+}
+.overlay .close{
+    font-family: sans-serif;
+    font-size: 45px;
+    transition: .5s;
+    transition-delay: ;
+    position: absolute;
+    left: 70%;
+    top: 15%;
+    text-decoration: none;
+    color: white;
+    opacity: 0;
+    
+}
+.overlay:target{
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.8);
+}
+.overlay:target .close{
+    opacity: 1;
+    animation:PopandUp .5s .5s;
+    transform: scale(1.5);
+    
+}
+.overlay img{
+    margin-left: 26%;
+    margin-top: 5%;
+    width: 600px;
+    height: 500px;
+    max-height: 100%;
+    
+}
+
+
+</style>
+<body>
+    <div class="center">
+    <h1 class="open">Where is the pie?</h1>
+    <h2>The pie is under the table</h2></div>
+    
+
+    <div class="container">
+        <ul class="gallery">
+            <li>
+                <a href="#gambar-1" class="wrap">
+                <img src="img/pie.png" class="img-1">
+            </a>
+            <div class="title"><p>Congratulations you have find me,<br> click to open the password</p></div>
+            <div class="overlay" id="gambar-1">
+                <a href="#" class="close">X</a>
+                <img src="img/apple-tart.png" class="img-2">
+            </div>
+            </li>
+        </ul>
+    </div>
+
+
+</body>
+</html>
