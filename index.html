@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1024">
     <link rel="icon" type="image/png" href="img/apple-tart.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
     <title>Where is the pie?</title>
 </head>
 <style>
@@ -148,6 +147,43 @@ div.title:hover, a.wrap:hover + div{
     margin-left: 390%;
     margin-top: 190%;
     opacity: 0.5;
+}
+
+/* Responsive website */
+@media (max-width: 500px){
+    .open{
+        font-size: 30px;
+        margin-left: -200px;
+    }
+
+    body{
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+
+    .img-1{
+    margin-left:-250px ;
+    
+    }
+
+   .overlay .img-2{
+        width: 400px;
+        height: 350px;
+        margin-left: 10%;
+        margin-top: 30%;
+    }
+    
+    .overlay .dancer{
+        margin-top: -50%;
+        margin-left: 50%;
+    }
+
+    .overlay .close{
+        margin-left: 12%;
+    }
+
+
 }
 </style>
 <body>
